@@ -1,0 +1,106 @@
+*{margin: 0;}
+
+.FundoImagem {
+    display: flex; 
+    height: 100vh;
+    background-image: url(../Michelly/img_fundo.jpg);
+    background-size: cover;
+    justify-content: center;
+  }
+
+  .ContainerTitulo{
+    text-align: center; 
+    height: 35px; 
+  }
+
+  .Titulo{
+    color: rgb(139, 240, 119); 
+    font-size: 50px; 
+    margin-top: 35px; 
+  }
+
+  .Titulo1{
+    padding-top: 30px;
+    color: rgb(0, 0, 0); 
+    font-size: 30px; 
+    margin-top: 35px; 
+  }
+
+  .Container{
+      display: flex; 
+      flex-direction: row; 
+      align-items: center; 
+  }
+
+  .ContainerFundoVerde {
+    position: absolute; 
+    top: 15vh;
+    padding-top: 30px;
+    align-items: center; 
+    text-align: center;
+    background-color: rgba(117, 243, 113, 0.815);
+    border-radius: 30px 0px 30px 30px; 
+    height: 230px; 
+    width: 24vw; 
+    font-weight: bolder; 
+    box-shadow: rgba(0, 0, 0, 0.418) 0px 7px 7px;
+  }
+
+  .input {
+    border-radius: 10px 0px 10px 0px;
+    border: 2px solid rgb(19, 15, 15);
+    height: 20px;
+    width: 200px;
+  }
+
+  .Botao{
+    padding: 5px;
+    background-color: #4075b3;
+    color: #e4e2e2;
+    border-radius: 10px 0px 10px 0px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    border: 2px solid white;
+  }
+
+  .FundoBrancoResposta{
+    margin-top: 3.8vh;
+    margin-left: 53vh;
+    padding: 30px;
+    padding-bottom: 15px; 
+    background-color: rgba(255, 255, 255, 0.918);
+    border-radius: 0px 30px 30px 30px;
+    height: fit-content;
+    width: fit-content;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.418) 0px 10px 12px;
+  }
+
+  .input3{
+    display: none;
+    width: fit-content;
+    height: 30px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #98c5f8d8;
+    border: 2px solid rgba(117, 243, 113, 0.973);
+  }
+
+  .corpo{
+    background-color:  rgba(117, 243, 113, 0.815);
+  }
+
+  .anexo{
+    padding-top: 30px;
+    align-items: center;
+    text-align: center;
+    height: 500px;
+  }
+
+  .footer{
+    font-size: 20px;
+    font-weight: bolder;
+    height: 100px;
+    background-color: rgb(168, 168, 168);
+    text-align: center;
+  }

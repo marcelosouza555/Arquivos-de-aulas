@@ -1,0 +1,17 @@
+.fundo {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.counteiner_tudo {
+    background-color: rgba(128, 128, 128, 0.568);
+        height:fit-content;
+        width: 60vh;
+    border-radius: 30px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
