@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 08 | Algortimo</title>
+</head>
+<body>
+
+    <!-- 
+    operador aritmético: +, -, /, *
+    operador relacional: <, >, ==, !=
+        a > b
+        a < b
+        a == b
+    
+    operador lógico: && (comparação), || (0u)
+    -->
+
+    Nome: <input type="text" id="ipt_nome"><br>
+    Media: <input type="text" id="ipt_media"><br>
+<!--     Número: <input type="text" id="ipt_numero"><br> -->
+    <button onclick="analisar()">Analisar</button>
+    <div id="div_mensagem"></div>
+    
+</body>
+</html>
+<script>
+    function analisar() {
+        /* var numero= Number(ipt_numero.value); */
+        var nome= ipt_nome.value;
+        var media= Number(ipt_media.value);
+
+        div_mensagem.innerHTML= "";
+        if (
+        media >= 0 && 
+        media <=10 && 
+        (nome == "Julia" || nome == "Eduardo")) {
+        div_mensagem.innerHTML= `Olá, ${nome}! Aprovad@`
+
+        }
+    }
+</script>

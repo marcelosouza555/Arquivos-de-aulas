@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 7 | Algoritmo</title>
+</head>
+<body>
+    <input type="text" id="ipt_numero">
+    <button onclick="analisar()">Analisar</button>
+    <div id="div_mensagem"></div>
+    
+</body>
+</html>
+
+<script>
+    function analisar() {
+        var numero= Number(ipt_numero.value);
+
+  /*       if (numero >=20) {
+            if (numero <= 30){
+                div_mensagem.innerHTML= `O número ${numero} está entre 20 e 30`
+            }
+        } */
+
+        if (numero >=20 && numero <= 30) {
+            div_mensagem.innerHTML= `O número ${numero} está entre 20 e 30`
+            }
+        }
+    
+</script>

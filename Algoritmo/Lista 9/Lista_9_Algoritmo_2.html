@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2 | Lista 09</title>
+</head>
+<body>
+    Salário<br>
+    <input type="text" id="ipt_salario"><br>
+    <button onclick="renda()">Confirmar salário</button>
+    <button onclick="p100()">Pagar conta de 100</button>
+    <button onclick="p500()">Pagar conta de 500</button>
+    <button onclick="loteria()">Ganhar 2000 na loteria</button>
+    <div id="div_mensagem"></div>
+    
+</body>
+</html>
+<script>
+    var salario;
+
+    function atualizar() {
+        div_mensagem.innerHTML=`Grana atual: R$${salario}`
+
+    }
+    function renda(){
+        salario= Number(ipt_salario.value);
+        atualizar();
+        
+    }
+    function p100(){
+        salario -=100;
+        atualizar();
+
+    }
+    function p500(){
+        salario -=500;
+        atualizar();
+
+    }
+    function loteria(){
+        salario= salario + 2000;
+        atualizar();
+
+    } 
+</script>

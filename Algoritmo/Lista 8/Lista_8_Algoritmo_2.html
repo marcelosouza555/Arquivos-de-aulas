@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2 | Lista 8</title>
+</head>
+<body>
+    Nota do ENEM<br>
+    <input type="text" id="ipt_enem"><br><br>
+    Vestibular interno<br>
+    <input type="text" id="ipt_interno"><br><br>
+    <button onclick="avaliacao()">Avaliação</button>
+    
+</body>
+</html>
+
+<script>
+    function avaliacao() {
+        var enem= Number(ipt_enem.value);
+        var interno= Number(ipt_interno.value);
+
+        if (enem >= 800 || interno >=700) alert (`Parabéns! Aprovado`)
+        else alert(`Tente semestre que vem!`)
+    }
+</script>

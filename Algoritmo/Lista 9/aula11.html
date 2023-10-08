@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11 | Algoritmo</title>
+</head>
+<body>
+    Nome: <input type="text" id="ipt_nome"><br>
+    <button onclick="alertar()">Alertar</button>
+    <div id="div_mensagem"></div>
+    
+</body>
+</html>
+
+<script>
+  
+    var contador= 0;
+
+    function contar() {
+        contador= contador+1
+    }
+
+    function alertar() {
+        var nome= ipt_nome.value;
+
+        contar();
+        
+       div_mensagem.innerHTML= `Olá, ${nome}! Você foi alertado`
+       div_mensagem.innerHTML+= `<br>Você recebeu ${contador} vez(es) esse alerta`
+    }
+</script>

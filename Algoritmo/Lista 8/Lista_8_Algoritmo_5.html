@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 5 | Lista 8</title>
+</head>
+<body>
+    Temperatura atual<br>
+    <input type="text" id="ipt_temperatura"><br><br>
+    <button onclick="analisar()">Analisar clima</button>
+    
+</body>
+</html>
+
+<script>
+    function analisar() {
+        var temperatura= ipt_temperatura.value;
+
+        if (temperatura <21 || temperatura >24) {
+            alert (`Temperatura desconforável`)
+            if (temperatura <21) {
+                + alert (`As pessoas vão ter hipotermia`)
+            }
+            if (temperatura >24) {
+                + alert (`As pessoas vão derreter`)
+            }
+        }
+    }
+</script>

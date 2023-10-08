@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 8 | Lista 8</title>
+</head>
+<body>
+    Empresa<br>
+    <input type="text" id="ipt_empresa"><br><br>
+    Bolsa empresa<br>
+    R$<input type="text" id="ipt_bolsa">mensal<br><br>
+    VR da empresa<br>
+    R$<input type="text" id="ipt_vr"> diário<br><br>
+    Deslocamento da empresa p/ SPtech <br>
+    <input type="text" id="ipt_deslocamento">minutos<br><br>
+    <button onclick="preferida()">É preferida?</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    function preferida() {
+        var empresa= ipt_empresa.value;
+        var bolsa= Number(ipt_bolsa.value);
+        var vr= Number(ipt_vr.value);
+        var deslocamento= Number(ipt_deslocamento.value);
+
+        if (bolsa >=1800 || vr >= 20 || deslocamento <=30) {
+            div_mensagem.innerHTML= `A empresa ${empresa} é uma de suas preferências`
+        } else {
+            div_mensagem.innerHTML= `A empresa ${empresa} está fora da sua lista`
+        }
+
+    }
+</script>

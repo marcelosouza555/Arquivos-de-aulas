@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 9 | lista 7</title>
+</head>
+<body>
+    <b>Altura desejada p/ pilotos?</b><br><br>
+    Altura Inicial <br>
+    <input type="text" id="ipt_alturaInicial">Metros<br><br>
+    Altura Final <br>
+    <input type="text" id="ipt_alturaFinal">Metros<br><br>
+    <b>Informações do candidato</b><br><br>
+    Nome <br>
+    <input type="text" id="ipt_nome"><br><br>
+    Altura <br>
+    <input type="text" id="ipt_altura">Metros<br><br>
+    <button onclick="verificar()"><b>Verificar</b></button>
+    <div id="div_mensagem"></div>
+    
+</body>
+</html>
+
+<script>
+    function verificar() {
+        var inicial= Number(ipt_alturaInicial.value);
+        var final= Number(ipt_alturaFinal.value);
+        var nome= ipt_nome.value;
+        var altura= Number(ipt_altura.value);
+
+        if (inicial >= 1 && final > inicial) {
+            div_mensagem.innerHTML= `a altura desejável inicial é de ${inicial}M e no máximo de ${final}M<br>`
+            if (altura>= inicial && altura <= final) {
+            div_mensagem.innerHTML+= `O candidato ${nome} com altura de ${altura}M participará do processo de seleção de piloto`
+            } else div_mensagem.innerHTML+= `Infelizmente o candidato ${nome} com altura de ${altura}M não atende os requisitos`
+            
+        } else { 
+            alert (`altura fora dos padrões desejáveis`)
+        }
+
+    }
+</script>

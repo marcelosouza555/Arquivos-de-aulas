@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 09 | Atividade 1</title>
+</head>
+<body>
+ <!--    <div id="div_mensagem">
+        <img style="width: 100PX"
+        src="https://img.freepik.com/vetores-gratis/fundo-de-ilusao-de-otica-psicodelico_23-2148566945.jpg">
+    </div><br> -->
+
+    <img id="img_psico"
+        style="width: 100PX"
+        src="https://img.freepik.com/vetores-gratis/fundo-de-ilusao-de-otica-psicodelico_23-2148566945.jpg"><br>
+    <button onclick="aumentar()">Aumentar a largura</button>
+    <button onclick="reduzir()">Reduzir a largura</button>
+    
+</body>
+</html>
+<script>
+    var largura= 100;
+
+/*     function exibir() {
+        div_mensagem.innerHTML= `<img style="width: ${largura}px" src="https://img.freepik.com/vetores-gratis/fundo-de-ilusao-de-otica-psicodelico_23-2148566945.jpg">`
+     } */
+
+    function aumentar() {
+        largura= largura + 10;
+        img_psico.style.width= `${largura}px`
+/*         exibir();
+ */    
+    }
+    function reduzir() {
+        largura= largura - 10;
+        img_psico.style.width= `${largura}px`
+/*         exibir();
+ */    
+    }
+</script>
