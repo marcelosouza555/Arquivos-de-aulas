@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 10 | ex 19</title>
+</head>
+<body>
+    Quantas xicaras com café c/ leite você tomou?<br>
+    <input type="text" id="ipt_qtd">
+    <button onclick="ver()">Ver quantidade</button>
+    <div id="div_imagem"></div>
+    
+</body>
+</html>
+<script>
+    function ver(){
+        var qtd= Number(ipt_qtd.value);
+        var contador= 0
+
+        while(contador < qtd) {
+            contador +=1;
+            div_imagem.innerHTML += `<img style="width: 100px;" src="https://img.freepik.com/fotos-premium/cafe-em-po-na-colher-de-madeira-em-branco_253984-1697.jpg" alt="">
+            <img style="width: 100px;" src="https://img.freepik.com/fotos-premium/cafe-em-po-na-colher-de-madeira-em-branco_253984-1697.jpg" alt="">
+    <img style="width: 100px;" src="https://bolosparavender.com.br/wp-content/uploads/2020/08/fazer-bolo-com-leite-em-po-da-certo-como-fazer.jpg" alt="">`
+        }
+
+
+    }
+</script>

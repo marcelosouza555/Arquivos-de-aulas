@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova continuada 2| Algoritmo</title>
+</head>
+<body>
+    Quantidade de pontos (Chakras) do Naruto?<br>
+    <input type="text" id="ipt_chakra"><br>
+    Quantos clones?<br>
+    <input type="text" id="ipt_clone"><br>
+    Quantos clone por linha?<br>
+    <input type="text" id="ipt_porlinha"><br>
+    <button onclick="criar()">Criar Clones</button>
+    <div id="div_mensagem"></div>
+    
+</body>
+</html>
+
+<script>
+    function criar() {
+        var chakra= Number(ipt_chakra.value);
+        var clones= Number(ipt_clone.value);
+        var porLinha= Number(ipt_porlinha.value);
+        var sobraChakra= Number(chakra - clones * 20);
+        var percentualSobra= Number(sobraChakra / chakra * 100)
+        var contador = 0;
+
+        if (chakra >=20 && chakra <= 5000) {
+            if (clones >=0 && clones <= 250){
+                if (porLinha >0){
+                    if (chakra >= clones * 20) {
+                        while (contador <clones){
+                            contador += 1;
+                            if (contador % porLinha == 1) {
+                                div_mensagem.innerHTML += `<br>`
+                            }
+                            div_mensagem.innerHTML += `    <img style="width: 100px;" src="https://digestfromexperts.com/wp-content/uploads/2020/03/How-to-Do-Shadow-Clone-Jutsu-The-Shadow-Clone-Jutsu-Hand-signs.jpg" alt="">`
+                        }
+
+
+                        div_mensagem.innerHTML += `<br> <b> ANÁLISE DA GERAÇÃO DE CLONES </b> <br> Chakra Inicial: ${chakra}<br> Quantidade de Clones ${clones}<br> Sobra de Chakra: ${sobraChakra} <br>`
+
+                        if (sobraChakra > 1000 || clones > 50 && percentualSobra >= 20) {
+                            div_mensagem.innerHTML += `PROVAVELMENTE VOCÊ VAI GANHAR`
+                        }
+                        else if(sobraChakra > 500 || clones > 20 &&  clones <50 && percentualSobra >= 10) {
+                            div_mensagem.innerHTML += `A LUTA VAI SER MUITO BOA`
+                        } else {
+                            div_mensagem.innerHTML += `TORÇA PARA O ADVERSÁRIO SER FRAQUINHO`
+                        }
+
+                    } else {
+                        alert (`Chakra insuficiente para o jutsu das sombras`)
+                    }
+
+                } else {
+                    alert (`ERRO NA ENTRADA DE DADOS – Energia tem que ser entre 20 e 5.000. Quantidade de Clones tem que ser entre 0 e 250. Quantidade de Clones por linha tem que ser maior que 0`)
+                }
+            }else {
+                    alert (`ERRO NA ENTRADA DE DADOS – Energia tem que ser entre 20 e 5.000. Quantidade de Clones tem que ser entre 0 e 250. Quantidade de Clones por linha tem que ser maior que 0`)
+                }
+        }else {
+                    alert (`ERRO NA ENTRADA DE DADOS – Energia tem que ser entre 20 e 5.000. Quantidade de Clones tem que ser entre 0 e 250. Quantidade de Clones por linha tem que ser maior que 0`)
+                }
+    
+    }
+</script>

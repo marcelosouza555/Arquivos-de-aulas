@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 10 | Ex 20</title>
+</head>
+<body>
+    Quantos depositos?<br>
+    <input type="text" id="ipt_qtd"><br>
+    Qual o valor?<br>
+    <input type="text" id="ipt_valor"><br>
+    <button onclick="acompanhar()">Acompanhar grana</button>
+    <div id="div_mensagem"></div>
+    
+</body>
+</html>
+
+<script>
+    function acompanhar() {
+        var qtd= Number(ipt_qtd.value);
+        var valor= Number(ipt_valor.value);
+        var contador= 0;
+
+        while (contador < qtd){
+            contador += 1;
+            div_mensagem.innerHTML += `${contador}º Mês: R$${valor * contador}<br>`;
+            
+        }
+        div_mensagem.innerHTML += `Total guardado: R$${valor * contador}<br>`;
+    }
+</script>
+

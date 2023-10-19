@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 10 | Ex 15</title>
+</head>
+<body>
+    Quantos elefantes incomodam? <br>
+    <input type="text" id="ipt_elefantes"><br>
+    <button onclick="atazanar()">Atazanar medium</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    function atazanar() {
+        var elefantes= ipt_elefantes.value;
+        var contador= 1
+        var exibir= ``;
+
+        if (elefantes ==1){
+            div_mensagem.innerHTML= `1 elefante incomoda muita gente! <br>`
+        }
+
+        while (contador < elefantes) {
+            exibir+= ` incomodam`
+            div_mensagem.innerHTML+= ` 1 elefante incomoda muita gente! <br>`
+
+            contador += 1
+
+            div_mensagem.innerHTML+= `${contador} elefantes incomodam ${exibir}, muito mais!<br>` 
+
+        }
+    }
+    
+</script>

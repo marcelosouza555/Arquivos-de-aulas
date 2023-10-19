@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio | Doce Gourmet</title>
+</head>
+<body>
+    Quantos Macarons?<br>
+    <input type="text" id="ipt_qtdmacarons"><br>
+    Preço do Macarons?<br>
+    <input type="text" id="ipt_macaronsvalor"><br>
+    Quantos Brigadeiro?<br>
+    <input type="text" id="ipt_qtdbrigadeiro"><br>
+    Preço do Brigadeiro?<br>
+    <input type="text" id="ipt_brigadeirovalor"><br>
+    Quantos Cupcakes?<br>
+    <input type="text" id="ipt_qtdcupcakes"><br>
+    Preço do Cupcakes?<br>
+    <input type="text" id="ipt_cupcakesvalor"><br>
+    Quantos Cheesecakes?<br>
+    <input type="text" id="ipt_qtdcheesecakes"><br>
+    Preço do Cheesecakes?<br>
+    <input type="text" id="ipt_cheesecakesvalor"><br>
+
+    <button onclick="verificar()">Verificar vendas</button>
+    <div id="div_mensagem"></div>
+
+    
+<!--     
+   
+   -->
+    
+</body>
+</html>
+
+<script>
+
+    function verificar(){
+        var qtd_macarons= Number(ipt_qtdmacarons.value);
+        var valor_macarons= Number(ipt_macaronsvalor.value);
+        var qtd_brigadeiro= Number(ipt_qtdbrigadeiro.value);
+        var valor_brigadeiro= Number(ipt_brigadeirovalor.value);
+        var qtd_cup= Number(ipt_qtdcupcakes.value);
+        var valor_cup= Number(ipt_cupcakesvalor.value);
+        var qtd_cheese= Number(ipt_qtdcheesecakes.value);
+        var valor_cheese= Number(ipt_cheesecakesvalor.value);
+        var contador= 0;
+
+        if (qtd_macarons > 0){
+            while (contador <qtd_macarons){
+            contador += 1
+            div_mensagem.innerHTML += `Venda${contador} - <img style="width: 100px;" src="https://www.onceuponachef.com/images/2022/10/macarons.jpg" alt=""> - R$${valor_macarons}<br>`}
+            contador = 0
+        }
+
+        if (qtd_brigadeiro > 0){
+            while (contador <qtd_brigadeiro){
+            contador += 1
+            div_mensagem.innerHTML += `Venda${contador} - <img style="width: 100px;" src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/631c8344389e4bada5bfb203b05f385e/BFV11392_Brigadeiro4-waysTastyOlympics-FB1080SQ.jpg?resize=1200:*" alt=""> - R$${valor_brigadeiro}<br>`}
+            contador= 0
+        }
+        
+        if (qtd_cup > 0){
+            while (contador <qtd_cup){
+            contador += 1
+            div_mensagem.innerHTML += `Venda${contador} -  <img style="width: 100px;" src="https://wallpaperswide.com/download/almond_cherry_cupcakes-wallpaper-2560x1440.jpg" alt=""> - R$${valor_cup}<br>`}
+            contador= 0
+        }
+
+        if (qtd_cheese > 0){
+            while (contador <qtd_cheese){
+            contador += 1
+            div_mensagem.innerHTML += `Venda${contador} -   <img style="width: 100px;" src="https://images.pexels.com/photos/14107/pexels-photo-14107.jpeg?cs=srgb&dl=pexels-valeria-boltneva-14107.jpg&fm=jpg" alt=""> - R$${valor_cheese}<br>`}
+            contador= 0
+        }
+
+    }
+</script>
